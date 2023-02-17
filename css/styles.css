@@ -255,9 +255,12 @@ body {
 }
 
 /* works */
-
+.works {
+    margin: 94px 0;
+    height: 386px;
+}
 .section-title {
-    margin: 94px 0 50px;
+    margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -272,8 +275,6 @@ body {
 
 .works-item-img {
     position: absolute;
-    margin-bottom: 94px;
-
 }
 
 .works-item-title {
@@ -290,7 +291,50 @@ body {
     background-color:  rgba(47, 48, 58, 0.8);;
 }
 
+/* employeers */
 
+.employees {
+    padding:  94px 0;
+    background-color: var(--second-background-color);
+}
+
+.employees-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.employees-item {
+    padding-bottom: 42px;
+    background-color: var(--main-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.employees-item-title {
+    padding: 30px 0 10px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: var(--main-color-title);
+}
+
+.employees-item-text {
+    padding-bottom: 28px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.employees-link-list {
+    display: flex;
+    margin: 0 44px;
+    justify-content: space-between;
+
+}
+
+.employeers-social-network-link:hover svg path,
+.employeers-social-network-link:focus svg path {
+    fill: var(--accent-color);
+}
 
 
 /* footer */

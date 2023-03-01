@@ -32,7 +32,6 @@ font-size: inherit;}
 }
 
 body {
-    min-width: 1200px;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.03em;
     color:  var(--main-color-text);
@@ -78,22 +77,23 @@ body {
 }
 
 .header-logo {
-    margin-right: 87px;
+    margin-right: 7.4%;
 
 }
 
 .header-nav {
     display: flex;
     flex: 0 1 auto;
-    width: 933px;
+    width: 75.74%;
     justify-content: space-between;
 }
 
 .header-menu-list {
     display: flex;
     flex: 0 1 auto;
-    margin-right: 90px;
-    width: 245px;
+    margin-right: 7.7%;
+    max-width: 21%;
+    gap: 20.4%;
     justify-content: space-between;
 }
 
@@ -129,9 +129,9 @@ body {
 
 .header-contact-list {
     display: flex;
-    flex: 0 1 auto;
-    width: 333px;
-    justify-content: space-between;
+    flex: 0 1 50%;
+    justify-content: end;
+    gap: 9%;
 }
 
 .header-contact-item {
@@ -178,7 +178,7 @@ body {
 
 .hero-title {
     margin-bottom: 30px;
-    max-width: 696px;
+    max-width: 60%;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -190,7 +190,7 @@ body {
 
 .hero-btn,
 .footer-subscription-form-btn  {
-    width: 216px;
+    width: 18.46%;
     height: 50px;
     font-weight: 700;
     font-size: 16px;
@@ -283,6 +283,7 @@ body {
 
 .works-item-img {
     position: absolute;
+    flex: 0 1 33.33%;
 }
 
 .works-item-title {
@@ -308,6 +309,7 @@ body {
 
 .employees-list {
     display: flex;
+    flex: 1 1 25%;
     justify-content: space-between;
     
 }

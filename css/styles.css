@@ -184,9 +184,13 @@ body {
 /* hero */
 
 .hero {
+    display: block;
     margin-bottom: 94px;
-    height: 600px;
-    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)) center/ 1600px no-repeat, url(../images/hero-image.png) center/ auto 100% no-repeat;
+    background-image:  linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-image.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
 }
 
 .hero-container {
@@ -209,13 +213,7 @@ body {
     color: var(--second-color);
 }
 @media (max-width: 992px) {
-    .hero-title {
-        font-size: 26px;
-        line-height: 1.62;
-    }
-    .hero-btn {
-        width: 200px;
-    }
+    
 }
 .hero-btn,
 .footer-subscription-form-btn  {
@@ -583,6 +581,16 @@ body {
     }
     .hero {
         margin-bottom: 60px;
+    }
+    .hero-container {
+        height: 400px;
+    }
+    .hero-title {
+        font-size: 26px;
+        line-height: 1.62;
+    }
+    .hero-btn {
+        width: 200px;
     }
     .benefits {
         margin-bottom: 60px;

@@ -77,7 +77,6 @@ body {
 .header-container {
     display: flex;
     flex: 0 1 auto;
-    justify-content: space-between;
     height: 80px;
     align-items: center;
 }
@@ -94,26 +93,25 @@ body {
 }
 
 .header-logo {
-    margin-right: 7.4%;
+    margin-right: 93px;
 
 }
 
 .header-nav {
     display: flex;
-    flex: 0 1 75.74%;
+    align-items: center;
+    width: 80%;
     justify-content: space-between;
 }
 
 .header-menu-list {
-    display: flex;
-    flex: 0 1 auto;
-    margin-right: 7.7%;
-    max-width: 21%;
+    display: flex; 
     gap: 50px;
-    justify-content: space-between;
+ 
 }
 
 .header-menu-item {
+    flex: 0 1 33.33%;
     align-self: center;
 }
 
@@ -147,12 +145,13 @@ body {
 
 .header-contact-list {
     display: flex;
-    flex: 0 1 50%;
+
     justify-content: end;
-    gap: 9%;
+    gap: 30px;
 }
 
 .header-contact-item {
+    flex: 0 1 50%;
     display: flex;
 }
 
@@ -170,6 +169,22 @@ body {
     color: var(--accent-color);
     fill: var(--accent-color);
     transition: color 0.3s fill 0.1s ;
+}
+
+
+
+
+
+.header-social-list {
+    display: none;
+}
+
+.open-icon-menu {
+    display: none;
+}
+
+.close-icon-menu {
+    display: none;
 }
 
 @media (max-width: 992px) {
@@ -332,7 +347,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     color: var(--second-color);
-    background-color:  rgba(47, 48, 58, 0.8);; */
+    background-color:  rgba(47, 48, 58, 0.8);
 }
 
 /* employeers */
@@ -571,9 +586,14 @@ body {
     .container {
         max-width: 768px;
     }
+    .header-logo {
+        margin-right: 87px;
+    }
+    .header-nav {
+        width: 70%;
+    }
     .header-contact-list {
         flex-direction: column;
-        padding-left: 96px;
         gap: 10px;
     }
     .hero {
@@ -670,10 +690,139 @@ body {
     }
     
     .header-container {
+        justify-content: space-between;
         height: 60px;
+ 
+    }
+    .header-nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        z-index: 50;
+        background-color: var(--main-background-color);
+        flex-direction: column;
+        align-items: start;
+        padding: 48px 40px; 
+        overflow: scroll;
+        
+    }
+    .close-icon-menu {
+        position: fixed;
+        right: -100%;
+    }
+    .header:target .header-nav  {
+        left: 0;
+    }
+    .header:target .close-icon-menu {
+        right: 15px;
+        z-index: 60;
+    }
+    .header-menu-list {
+        flex-direction: column;
+        padding-bottom: 100%;
+        gap: 20%;
+    }
+    .header-menu-item {
+        font-weight: 500;
+        font-size: 40px;
+        align-self: start;
+        
+    }
+    .header-menu-link:hover::after,
+    .header-menu-link:focus::after,
+    .menu-link-active::after {
+        display: none;
+    }
+
+    .header-contact-list {
+        padding-bottom: 9%;
+        gap: 40%;
+        
+    }
+    .header-contact-icon {
+        display: none;
+    }
+    .header-contact-link {
+        font-weight: 500;
+        font-size: 24px;
+        padding-left: 0;
+
+    } 
+    .header-contact-link:hover,
+    .header-contact-link:focus {
+        font-size: 34px;
     }
     .logo {
         font-size: 24px;
+    }
+
+   
+    .header-social-list {
+        display: flex;
+        gap: 20px;
+    }
+    .header-social-item {
+        position: relative;
+    }
+    .header-social-item:first-child::after,
+    .header-social-item:nth-child(2)::after,
+    .header-social-item:nth-child(3)::after {
+        content: "";
+        position: absolute;
+        right: -10px;
+        width: 1px;
+        height: 100%;
+        background-color: rgba(33, 33, 33, 0.2);
+    }
+    
+    .header-social-link {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.22;
+        color: var(--accent-color);
+    }
+    .open-icon-menu {
+        position: relative;
+        flex: 0 0 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 16px;
+    
+    }
+    .open-icon-menu::before,
+    .open-icon-menu::after {
+        content: '';
+        height: 3px;
+        background-color: var(--main-color-title);
+    }
+    
+    .open-icon-menu span {
+        height: 3px;
+        background-color: var(--main-color-title);
+    }
+    
+    .open-icon-menu:hover::before,
+    .open-icon-menu:focus::before,
+    .open-icon-menu:hover::after,
+    .open-icon-menu:focus::after,
+    .open-icon-menu:hover span,
+    .open-icon-menu:focus span {
+        background-color: var(--accent-color);
+        transition: all 0.3s;
+    }
+    .close-icon-menu {
+        display: block;
+    }
+    .close-icon-menu svg {
+        margin-top: 3px;
+    }
+    .close-icon-menu:hover svg path,
+    .close-icon-menu:focus svg path {
+        fill: var(--accent-color);
+        transition: all 0.3s;
     }
 
     .benefits-item,
@@ -709,5 +858,7 @@ body {
     .footer-socials-list {
         justify-content: center;
     }
-
+    .footer-subscription-form-input {
+        width: 93%;
+    }
 }

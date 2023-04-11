@@ -26,7 +26,7 @@
                             <a href="portfolio.html" class="header-menu-link">Портфоліо</a>
                         </li>
                         <li class="header-menu-item">
-                            <a href="#contacts-open" class="header-menu-link contacts-link" >Контакти</a>
+                            <a href="#" id="contacts" class="header-menu-link contacts-link" >Контакти</a>
                         </li>
                     </ul>
                     <ul class="header-contact-list">
@@ -616,10 +616,8 @@
             <section class="contacts">
                 <div class="container contacts-container">
                     <h1 class="contacts-title visually-hidden">Контакти</h1>
-                    
                     <form action="" method="get" class="contacts-form">
-                        <div class="contacts-close" id="contacts-close
-                        ">
+                        <div class="contacts-close">
                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="15" cy="15" r="15" fill="white"/>
                                 <circle cx="15" cy="15" r="14.5" stroke="black" stroke-opacity="0.1"/>
@@ -744,5 +742,20 @@
             </div>
         </footer>
     </div>
+    <script>
+        let contactsOpenLink = document.getElementById('contacts');
+        let contacts = document.querySelector('.contacts')
+        let contactsForm = document.querySelector('.contacts-form');
+        contactsOpenLink.onclick = function() {
+            contacts.style.display = 'block';
+            contactsForm.classList.add('open');
+            contactsForm.style.top = (document.documentElement.clientHeight - contactsForm.offsetHeight) / 2 + 'px';
+        }
+        let contactsClose = document.querySelector('.contacts-close');
+        contactsClose.onclick = function() {
+            contacts.style.display = 'none';
+            contactsForm.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
